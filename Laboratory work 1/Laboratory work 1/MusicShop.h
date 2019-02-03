@@ -20,4 +20,3 @@ public:
 	void SetAlbums(string albums);
 	string GetAlbums(string albums);
 };
-
