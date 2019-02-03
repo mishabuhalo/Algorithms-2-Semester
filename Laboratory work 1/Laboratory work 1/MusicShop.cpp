@@ -16,7 +16,7 @@ void MusicShop::SetArtist(string artist)
 	this->artist = artist;
 }
 
-string MusicShop::GetArtist(string artist)
+string MusicShop::GetArtist()
 {
 	return artist;
 }
@@ -26,7 +26,7 @@ void MusicShop::SetAlbums(string albums)
 	this->albums = albums;
 }
 
-string MusicShop::GetAlbums(string albums)
+string MusicShop::GetAlbums()
 {
 	return albums;
 }

@@ -2,7 +2,7 @@
 
 
 
-int firstHash(string name, int seed, int length)
+int firstHashing(string name, int seed, int length)
 {
 	unsigned hash = 0;
 	for (int i = 0; i <int(name.size()); i++)
@@ -12,7 +12,8 @@ int firstHash(string name, int seed, int length)
 	return int(hash%length);
 }
 
-int secondHash(string name, int seed, int length)
+
+int secondHashing(string name, int seed, int length)
 {
 	unsigned hash = 0;
 	for (int i = 0; i <int(name.size()); i++)
