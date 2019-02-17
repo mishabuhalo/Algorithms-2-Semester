@@ -155,7 +155,7 @@ template <class T> class OrderStatisticTree {
 			parent->toBlack();
 			grandparent->toRed();
 			if (grandparent->getParent()) {
-				insertCase1(grandparent);
+				insertCase1(grandparent);	
 			}
 			else grandparent->toBlack();
 		}
@@ -257,18 +257,6 @@ template <class T> class OrderStatisticTree {
 		}
 	}
 
-	Node* findMin(Node* ptrToNode) {
-		while (ptrToNode->getLeftChild() != nullptr)
-			ptrToNode = ptrToNode->getLeftChild();
-		return ptrToNode;
-	}
-
-	Node* findMax(Node* ptrToNode) {
-		while (ptrToNode->getRightChild() != nullptr)
-			ptrToNode = ptrToNode->getRightChild();
-		leaves -= 1;
-		return ptrToNode;
-	}
 
 	int getHeight(Node* startNode) {
 		if (!startNode)

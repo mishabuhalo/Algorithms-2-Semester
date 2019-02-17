@@ -12,7 +12,6 @@ int main()
 
 	ifstream flights("Albums");
 	readInformation(flights, vect);
-
 	for_each(begin(vect), end(vect), [](Artist operand) {
 
 		OrderStatisticTree<information> tree;
@@ -22,7 +21,7 @@ int main()
 		}
 
 		tree.print();
-		cout << endl <<"Height: " <<  tree.getHeight();
+		cout << endl << " Height: " << tree.getHeight();
 
 		cout << endl << "--------------next------------" << endl;
 

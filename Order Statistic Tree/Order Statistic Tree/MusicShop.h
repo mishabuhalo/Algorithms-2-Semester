@@ -16,13 +16,13 @@ class Artist;
 class information
 {
 
+	
+
+public:
 	friend Artist;
 	Artist *artist;
 	string album;
 	int releaseYear;
-
-public:
-	
 	information();
 
 	bool operator > (const information &operand);
@@ -40,11 +40,11 @@ public:
 class Artist
 {
 	friend information;
-	string artist;
+
 public:
 
 	
-
+	string artist;
 	vector<information> info;
 
 	void add(information i)
