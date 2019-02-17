@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MusicShop.h" />
+    <ClInclude Include="OrderTree.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Albums.txt" />

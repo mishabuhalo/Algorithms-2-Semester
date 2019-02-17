@@ -1,6 +1,18 @@
 #include "MusicShop.h"
 using namespace std;
 
+
+
+
+bool information::operator > (const information &operand) {
+	return this->releaseYear > operand.releaseYear;
+}
+
+bool information::operator < (const information &operand) {
+	return this->releaseYear < operand.releaseYear;
+}
+
+
 vector<Artist> readArtists(ifstream & is)
 {
 	int n = 0;
@@ -25,7 +37,7 @@ void readInformation(ifstream & is, vector<Artist>& vect)
 	is >> n;
 	for (int i = 0; i < n; i++)
 	{
-		string date;
+		int releaseYear;
 		string temp;
 
 		is >> temp;
@@ -36,24 +48,24 @@ void readInformation(ifstream & is, vector<Artist>& vect)
 		//cout << value->getName() << endl;
 
 		is >> temp;
-		is >> date;
-		information info(temp, date, *value);
+		is >> releaseYear;
+		information info(temp, releaseYear, *value);
 	}
 }
 
 ostream & operator<<(std::ostream & obj, information & operand)
 {
-	obj << operand.date;
+	obj << operand.releaseYear;
 	return obj;
 }
 
-information::information(): date("00.00.00")
+information::information(): album("null")
 {
 	artist = nullptr;
-	album = nullptr;
+	releaseYear = 0;
 }
 
-information::information(string album, string date, Artist & artist)
+information::information(string album, int releaseYear, Artist &artist) :releaseYear(releaseYear), album(album)
 {
 	this->artist = &artist;
 	artist.add(*this);

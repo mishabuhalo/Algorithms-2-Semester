@@ -12,24 +12,28 @@ class Artist;
 vector<Artist> readArtists(ifstream& is);
 
 void readInformation(ifstream & is, vector<Artist>& vect);
-
+class Artist;
 class information
 {
-	
 
-public:
 	friend Artist;
 	Artist *artist;
 	string album;
-	string date;
+	int releaseYear;
+
+public:
+	
 	information();
-	information( string album, string date, Artist& artist);
+
+	bool operator > (const information &operand);
+
+	bool operator < (const information &operand);
 
 	string getAlbum()
 	{
 		return album;
 	}
-
+	information(string album, int releaseYear, Artist& artist);
 	friend ostream& operator << (std::ostream &obj, information &operand);
 
 };
@@ -38,6 +42,9 @@ class Artist
 	friend information;
 	string artist;
 public:
+
+	
+
 	vector<information> info;
 
 	void add(information i)
@@ -54,7 +61,7 @@ public:
 	{
 		for_each(begin(info), end(info), []( information i)
 		{
-			cout << i.album << '/t' << i.date << endl;
+			cout << i.album << '/t' << i.releaseYear << endl;
 		});
 	}
 
