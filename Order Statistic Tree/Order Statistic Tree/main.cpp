@@ -7,25 +7,17 @@ using namespace std;
 
 int main()
 {
-	ifstream airlines("Artists");
-	auto vect = readArtists(airlines);
-
 	ifstream flights("Albums");
-	readInformation(flights, vect);
-	for_each(begin(vect), end(vect), [](Artist operand) {
+	auto vect = readInformation(flights);
+	OrderStatisticTree<information> tree;
 
-		OrderStatisticTree<information> tree;
+	for (int i = 0; i < vect.size(); i++)
+	{
+			tree.insert(vect[i]);
+	}
 
-		for (auto x : operand.info) {
-			tree.insert(x);
-		}
-
-		tree.print();
-		cout << endl << " Height: " << tree.getHeight();
-
-		cout << endl << "--------------next------------" << endl;
-
-	});
+	tree.print();
+	
 
 	cin.get();
 	cin.get();

@@ -155,7 +155,7 @@ template <class T> class OrderStatisticTree {
 			parent->toBlack();
 			grandparent->toRed();
 			if (grandparent->getParent()) {
-				insertCase1(grandparent);	
+				insertCase1(grandparent);
 			}
 			else grandparent->toBlack();
 		}
@@ -419,7 +419,7 @@ public:
 		for (int i = 0; i < depth * 5; ++i) { std::cout << " "; }
 
 		auto x = node->getData();
-		cout << x << " " <<(node->getColor() ? "R" : "B") << " "<< node->getSize() << endl;
+		cout << x.album << " " << (node->getColor() ? "R" : "B") << " " << node->getSize() << endl;
 
 		if (node->getRightChild()) print(node->getRightChild(), depth + 1);
 	}

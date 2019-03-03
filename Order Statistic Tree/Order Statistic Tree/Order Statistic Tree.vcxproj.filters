@@ -31,11 +31,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Artists.txt">
+    <None Include="Albums">
       <Filter>Исходные файлы</Filter>
-    </Text>
-    <Text Include="Albums.txt">
+    </None>
+    <None Include="Artists">
       <Filter>Исходные файлы</Filter>
-    </Text>
+    </None>
   </ItemGroup>
 </Project>

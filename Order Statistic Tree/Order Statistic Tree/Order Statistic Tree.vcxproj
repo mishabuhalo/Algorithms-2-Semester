@@ -123,8 +123,8 @@
     <ClInclude Include="OrderTree.h" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Albums.txt" />
-    <Text Include="Artists.txt" />
+    <None Include="Albums" />
+    <None Include="Artists" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
