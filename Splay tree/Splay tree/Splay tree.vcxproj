@@ -117,9 +117,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MusicShop.cpp" />
+    <ClCompile Include="SplayTree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MusicShop.h" />
+    <ClInclude Include="SplayTree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
