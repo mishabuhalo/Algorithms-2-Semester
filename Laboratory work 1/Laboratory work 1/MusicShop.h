@@ -1,26 +1,37 @@
 #pragma once
 #include <iostream>
-#include <string>
 #include <vector>
+#include <string>
+#include <fstream>
+#include <algorithm>
 
 using namespace std;
 
-class MusicShop
+
+
+class information
 {
-	string artist;
-	string albums;
-
-	vector<shared_ptr<MusicShop>> ourObjects;
-	int seed;
-	vector<int> mainHash;
-
 public:
-	MusicShop();
-	~MusicShop();
+	string name;
+	string album;
+	int releaseYear;
+	information();
 
-	void SetArtist(string artist);
-	string GetArtist();
+	bool operator > (const information &operand);
 
-	void SetAlbums(string albums);
-	string GetAlbums();
+	bool operator < (const information &operand);
+
+	string getAlbum()
+	{
+		return album;
+	}
+	information(string name, string album, int releaseYear);
+	friend ostream& operator << (std::ostream &obj, information &operand);
+
 };
+
+vector<information> readInformation(ifstream & is);
+
+
+
+

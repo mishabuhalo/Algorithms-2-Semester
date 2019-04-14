@@ -1,8 +1,13 @@
-#include <iostream>
 
-using namespace std;
+#include <vector>
+#include <fstream>
+#include "MusicShop.h"
 
 int main()
 {
-	return 0;
+	ifstream albums("Albums");
+	auto vect = readInformation(albums);
+
+	cin.get();
+	cin.get();
 }
