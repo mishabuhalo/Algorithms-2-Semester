@@ -25,6 +25,10 @@ public:
 	{
 		return album;
 	}
+	int getYear()
+	{
+		return releaseYear;
+	}
 	information(string name, string album, int releaseYear);
 	friend ostream& operator << (std::ostream &obj, information &operand);
 
